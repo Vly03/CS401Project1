@@ -17,17 +17,9 @@ public class AddressBookApplication
 
     public static void main(String args[])
     {
+        Menu.displayMenu();
         AddressBook ab = new AddressBook();
-        AddressEntry entry1 = new AddressEntry("Bill", "Gates", "Manhattan", "Seattle", "CA", 95162,
-                "(408)562-9368", "billgates@yahoo.com");
 
-
-        AddressEntry entry2 = new AddressEntry("Ryan", "Renolds", "Sunset Boulevard", "Austin", "TX", 95762,
-                "(408)782-2349", "ryanrenolds@gmail.com");
-
-
-        // initAddressBookExercise(entry1, entry2, ab);
-        //ab.addEntry(entry1);
     }
 }
 
