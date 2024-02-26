@@ -75,7 +75,6 @@ public class AddressBook
                 System.out.println("");
             }
         }
-
         userInt = userInput.nextInt();
         userInput.nextLine();
         System.out.println("Hit 'y' to remove the following entry or 'n' to return to the main menu: ");
@@ -103,7 +102,7 @@ public class AddressBook
      * Option (a) of Menu - Load in contacts from a text
      * @author Victor Ly
      * @throws IOException FileStream
-     * @since (2/26) Commit tba
+     * @since (2/26) Commit 577bde5efdac6f2902a05621e6a222e125c7e8f3
      */
     public void loadFromFile() throws IOException
     {
@@ -133,6 +132,27 @@ public class AddressBook
 
             AddressEntry newEntry  = new AddressEntry(firstName, lastName, street, city, state, zip, telephone, email);
             addEntry(newEntry);
+        }
+    }
+
+    /**
+     * Option (d) of Menu - Searches and displays all contacts with the last name prompted from user
+     * @author Victor Ly
+     * @since Commit tba
+     */
+    public void findContact()
+    {
+        String searchStr = Menu.prompt_LastName();
+        int count = 1;
+
+        for (AddressEntry addressEntry : entryList)
+        {
+            if (addressEntry.getLastName().toUpperCase().contains(searchStr.toUpperCase()))
+            {
+                System.out.println("\n" + count + ". ");
+                count++;
+                System.out.print(addressEntry);
+            }
         }
     }
 
