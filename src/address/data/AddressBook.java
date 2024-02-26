@@ -87,9 +87,7 @@ public class AddressBook
         {
             entryList.remove(entryList.get(matchedIndex.get(userInt - 1)));
         }
-
     }
-
 
     /**
      * Simple helper function to remove an existing addressEntry from the entryList arraylist
