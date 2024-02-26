@@ -1,6 +1,7 @@
 package address.data;
 import address.Menu;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -20,7 +21,7 @@ public class AddressBook
     public AddressBook()        { entryList = new ArrayList<>();}
 
     /**
-     * Option (2) of Menu - Add an entry by having a user enter its parameters
+     * Option (b) of Menu - Add an entry by having a user enter its parameters
      * @author Victor Ly
      * @since (2/25) Commit 875e9b14f35226ed1892c77a68070c72ad9de062
      */
@@ -52,14 +53,14 @@ public class AddressBook
     }
 
     /**
-     * Option (3) of Menu - Remove an entry by first searching then selecting the contact to remove
+     * Option (c) of Menu - Remove an entry by first searching then selecting the contact to remove
      * @author Victor Ly
-     * @since (2/25) tba
+     * @since (2/26) Commit d483d0399b9b7fb26afd14f86ca263d38eee3325
      */
     public void removeEntry()
     {
         String searchStr = Menu.prompt_LastName();
-        ArrayList<Integer> matchedIndex = new ArrayList<Integer>();
+        ArrayList<Integer> matchedIndex = new ArrayList<>();
         int count = 1;
 
         System.out.println("\nIf available, select the entry number to remove: ");
@@ -90,8 +91,6 @@ public class AddressBook
     }
 
 
-
-
     /**
      * Simple helper function to remove an existing addressEntry from the entryList arraylist
      * @author Victor Ly
@@ -100,6 +99,43 @@ public class AddressBook
     public void removeEntry(AddressEntry entry)
     {
         entryList.remove(entry);
+    }
+
+    /**
+     * Option (a) of Menu - Load in contacts from a text
+     * @author Victor Ly
+     * @throws IOException FileStream
+     * @since (2/26) Commit tba
+     */
+    public void loadFromFile() throws IOException
+    {
+        String firstName, lastName, street, city, state, zip, telephone, email;
+
+        System.out.println("Enter file name: ");
+        userString = userInput.nextLine();
+
+        /* Shows all available files in scope
+        File file = new File(".");
+        for(String fileNames : file.list()) System.out.println(fileNames);
+        */
+
+        FileReader file_input = new FileReader(userString);
+        BufferedReader BR = new BufferedReader(file_input);
+
+        while (BR.readLine() != null)
+        {
+            firstName = BR.readLine();
+            lastName = BR.readLine();
+            street = BR.readLine();
+            city = BR.readLine();
+            state = BR.readLine();
+            zip = BR.readLine();
+            telephone = BR.readLine();
+            email = BR.readLine();
+
+            AddressEntry newEntry  = new AddressEntry(firstName, lastName, street, city, state, zip, telephone, email);
+            addEntry(newEntry);
+        }
     }
 
     /**
