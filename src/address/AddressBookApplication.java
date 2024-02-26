@@ -5,7 +5,11 @@ import address.data.AddressBook;
 import address.data.AddressEntry;
 import java.util.Scanner;
 
-
+/**
+ * AddressBookApplication serves as the main() method where the menu is initialized
+ * @author Victor Ly
+ * @since 1.0 Exercise 2
+ */
 public class AddressBookApplication
 {
     public static void initAddressBookExercise(AddressEntry entry1, AddressEntry entry2, AddressBook ab)
@@ -19,41 +23,41 @@ public class AddressBookApplication
     public static void main(String[] args)
     {
         Scanner userInput = new Scanner(System.in);
-        int selection = 0;
+        String selection = "";
         AddressBook ab = new AddressBook();
         String userString;
         int userInt;
 
 
 
-        while (selection != 6)
+        while (!selection.equals("f"))
         {
             Menu.displayMenu();
-            selection = userInput.nextInt();
-            userInput.nextLine();
+            selection = userInput.nextLine();
 
-            if (selection == 1)
+            if (selection.equals("a"))
             {
             }
 
-            if (selection == 2)
+            if (selection.equals("b"))
             {
                 ab.createEntry();
             }
 
-            if (selection == 3)
+            if (selection.equals("c"))
+            {
+                ab.removeEntry();
+            }
+
+            if (selection.equals("d"))
             {
             }
 
-            if (selection == 4)
+            if (selection.equals("e"))
             {
             }
 
-            if (selection == 5)
-            {
-            }
-
-            if (selection == 6)
+            if (selection.equals("f"))
             {
                 System.out.println("Exiting the program.");
             }
