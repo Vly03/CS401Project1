@@ -23,12 +23,12 @@ public class Menu
         System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
 
         System.out.println("Enter a menu selection:");
-        System.out.println("1. Loading from file");
-        System.out.println("2. Addition");
-        System.out.println("3. Removal");
-        System.out.println("4. Find");
-        System.out.println("5. Listing");
-        System.out.println("6. Quit");
+        System.out.println("a. Loading from file");
+        System.out.println("b. Addition");
+        System.out.println("c. Removal");
+        System.out.println("d. Find");
+        System.out.println("e. Listing");
+        System.out.println("f. Quit");
 
         System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
     }
