@@ -156,8 +156,8 @@ public class AddressEntry
      */
     public String toString()
     {
-        return "\nFirst Name: " + firstName + "\nLast Name: " + lastName + "\nStreet: " + street + "\nCity: " + city + "\nState: "
-                + state + "\nZip: " + zip +  "\nTelephone: " + telephone + "\nEmail: " + email;
+        return "First Name: " + firstName + "\nLast Name: " + lastName + "\nStreet: " + street + "\nCity: " + city + "\nState: "
+                + state + "\nZip: " + zip +  "\nTelephone: " + telephone + "\nEmail: " + email + "\n" + "\n";
     }
 }
 
