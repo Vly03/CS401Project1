@@ -3,6 +3,8 @@ import address.Menu;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 /**
@@ -138,7 +140,7 @@ public class AddressBook
     /**
      * Option (d) of Menu - Searches and displays all contacts with the last name prompted from user
      * @author Victor Ly
-     * @since Commit tba
+     * @since (2/26) Commit 10108d52deee66c1abe71d81ff6c431b582de9a7
      */
     public void findContact()
     {
@@ -154,6 +156,21 @@ public class AddressBook
                 System.out.print(addressEntry);
             }
         }
+    }
+
+    /**
+     * Option (e) of Menu - Lists all contacts in alphabetical order
+     * @author Victor Ly
+     * @since Commit tba
+     */
+    public void listContacts()
+    {
+        ArrayList<AddressEntry> entryListClone;
+        entryListClone = (ArrayList<AddressEntry>) entryList.clone();
+
+        entryListClone.sort(Comparator.comparing(AddressEntry::getLastName));
+
+        for (AddressEntry entry : entryListClone)       {System.out.print(entry);}
     }
 
     /**
