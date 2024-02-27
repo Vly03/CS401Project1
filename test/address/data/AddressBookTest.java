@@ -75,16 +75,16 @@ class AddressBookTest
         String searchStr1 = "wa";
         String searchStr2 = "k";
 
-        ArrayList<AddressEntry> WayneWatson = new ArrayList<AddressEntry>();        //Target string for "wa"
+        ArrayList<AddressEntry> WayneWatson = new ArrayList<>();        //Target string for "wa"
         WayneWatson.add(newEntry2);
         WayneWatson.add(newEntry5);
 
-        ArrayList<AddressEntry> KentKettle = new ArrayList<AddressEntry>();         //Target string for "k"
+        ArrayList<AddressEntry> KentKettle = new ArrayList<>();         //Target string for "k"
         KentKettle.add(newEntry1);
         KentKettle.add(newEntry6);
 
-        ArrayList<AddressEntry> contactWithWA = new ArrayList<AddressEntry>();     //Test string to look contacts with "wa"
-        ArrayList<AddressEntry> contactWithK = new ArrayList<AddressEntry>();      //Test string to look for contacts with "k"
+        ArrayList<AddressEntry> contactWithWA = new ArrayList<>();     //Test string to look contacts with "wa"
+        ArrayList<AddressEntry> contactWithK = new ArrayList<>();      //Test string to look for contacts with "k"
 
         ab.addEntry(newEntry1);
         ab.addEntry(newEntry2);
@@ -140,7 +140,7 @@ class AddressBookTest
         ab.addEntry(newEntry5);
         ab.addEntry(newEntry6);
 
-        ArrayList<AddressEntry> sortedContactsList = new ArrayList<AddressEntry>();  // Sorted list of contacts
+        ArrayList<AddressEntry> sortedContactsList = new ArrayList<>();  // Sorted list of contacts
 
         sortedContactsList.add(newEntry3);
         sortedContactsList.add(newEntry1);
