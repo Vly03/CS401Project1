@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class AddressBook
 {
-    private ArrayList<AddressEntry> entryList;
+    public ArrayList<AddressEntry> entryList;
     public static Scanner userInput = new Scanner(System.in);
     public static String userString;
     public static int userInt;
@@ -136,7 +136,6 @@ public class AddressBook
                 isSuccessful = false;
             }
         }
-
     }
 
     /**
