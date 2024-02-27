@@ -109,32 +109,42 @@ public class AddressBook
     public void loadFromFile() throws IOException
     {
         String firstName, lastName, street, city, state, zip, telephone, email;
+        boolean isSuccessful = false;
 
-        System.out.println("Enter file name: ");
-        userString = userInput.nextLine();
-
-        /* Shows all available files in scope
-        File file = new File(".");
-        for(String fileNames : file.list()) System.out.println(fileNames);
-        */
-
-        FileReader file_input = new FileReader(userString);
-        BufferedReader BR = new BufferedReader(file_input);
-
-        while (BR.readLine() != null)
+        while (!isSuccessful)
         {
-            firstName = BR.readLine();
-            lastName = BR.readLine();
-            street = BR.readLine();
-            city = BR.readLine();
-            state = BR.readLine();
-            zip = BR.readLine();
-            telephone = BR.readLine();
-            email = BR.readLine();
+            try
+            {
+                System.out.println("Enter file name: ");
+                userString = userInput.nextLine();
 
-            AddressEntry newEntry  = new AddressEntry(firstName, lastName, street, city, state, zip, telephone, email);
-            addEntry(newEntry);
+                FileReader file_input = new FileReader(userString);
+                BufferedReader BR = new BufferedReader(file_input);
+
+                while (BR.readLine() != null)
+                {
+                    firstName = BR.readLine();
+                    lastName = BR.readLine();
+                    street = BR.readLine();
+                    city = BR.readLine();
+                    state = BR.readLine();
+                    zip = BR.readLine();
+                    telephone = BR.readLine();
+                    email = BR.readLine();
+
+                    AddressEntry newEntry  = new AddressEntry(firstName, lastName, street, city, state, zip, telephone, email);
+                    addEntry(newEntry);
+                }
+                isSuccessful = true;
+            }
+
+            catch (Exception e)
+            {
+                System.out.println("Error: File does not exist. Try again");
+                isSuccessful = false;
+            }
         }
+
     }
 
     /**
@@ -161,7 +171,7 @@ public class AddressBook
     /**
      * Option (e) of Menu - Lists all contacts in alphabetical order
      * @author Victor Ly
-     * @since Commit tba
+     * @since Commit 7fd91a55631c38f08a9c598b6f2fd3090244a625
      */
     public void listContacts()
     {
