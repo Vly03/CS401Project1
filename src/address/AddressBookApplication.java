@@ -1,6 +1,4 @@
 package address;
-
-
 import address.data.AddressBook;
 import address.data.AddressEntry;
 import java.io.IOException;
@@ -34,7 +32,7 @@ public class AddressBookApplication
 
             if (selection.equals("e"))      {ab.listContacts();}
 
-            if (selection.equals("f"))       {System.out.println("Exiting the program.");}
+            if (selection.equals("f"))      {System.out.println("Exiting the program.");}
 
         }
     }

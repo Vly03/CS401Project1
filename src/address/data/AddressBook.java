@@ -1,6 +1,5 @@
 package address.data;
 import address.Menu;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -159,7 +158,6 @@ public class AddressBook
                 System.out.print(addressEntry);
             }
         }
-
     }
 
     /**
