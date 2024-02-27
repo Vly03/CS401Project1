@@ -65,7 +65,6 @@ public class AddressBook
         ArrayList<Integer> matchedIndex = new ArrayList<>();
         int count = 1;
 
-        System.out.println("\nIf available, select the entry number to remove: ");
         for (int index = 0; index < entryList.size(); index++)
         {
             if (entryList.get(index).getLastName().toUpperCase().contains(searchStr.toUpperCase()))
@@ -77,6 +76,12 @@ public class AddressBook
                 System.out.println("");
             }
         }
+        if (count == 1)
+        {
+            System.out.println("No contact was found with that last name.");
+            return;
+        }
+
         userInt = userInput.nextInt();
         userInput.nextLine();
         System.out.println("Hit 'y' to remove the following entry or 'n' to return to the main menu: ");
@@ -167,7 +172,6 @@ public class AddressBook
             }
         }
 
-        if (count == 1)     {System.out.println("No contact was found with that last name.");}
     }
 
     /**
