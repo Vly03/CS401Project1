@@ -3,7 +3,6 @@ import address.Menu;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
@@ -18,7 +17,6 @@ public class AddressBook
     public static Scanner userInput = new Scanner(System.in);
     public static String userString;
     public static int userInt;
-
 
     public AddressBook()        { entryList = new ArrayList<>();}
 
@@ -93,16 +91,6 @@ public class AddressBook
         {
             entryList.remove(entryList.get(matchedIndex.get(userInt - 1)));
         }
-    }
-
-    /**
-     * Simple helper function to remove an existing addressEntry from the entryList arraylist
-     * @author Victor Ly
-     * @since 1.0 Exercise 2
-     */
-    public void removeEntry(AddressEntry entry)
-    {
-        entryList.remove(entry);
     }
 
     /**
