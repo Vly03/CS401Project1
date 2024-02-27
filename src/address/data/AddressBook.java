@@ -157,6 +157,11 @@ public class AddressBook
                 System.out.print(addressEntry);
             }
         }
+        if (count == 1)
+        {
+            System.out.println("No contact was found with that last name.");
+            return;
+        }
     }
 
     /**
