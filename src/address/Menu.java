@@ -75,8 +75,6 @@ public class Menu
      */
     public static String prompt_FirstName()
     {
-        boolean invalidInput;
-
         System.out.println("First name: ");
         userString = userInput.nextLine();
 
@@ -96,7 +94,6 @@ public class Menu
      */
     public static String prompt_LastName()
     {
-        boolean invalidInput;
 
         System.out.println("Last name: ");
         userString = userInput.nextLine();
@@ -130,8 +127,6 @@ public class Menu
      */
     public static String prompt_City()
     {
-        boolean invalidInput;
-
         System.out.println("City: ");
         userString = userInput.nextLine();
 
@@ -151,8 +146,6 @@ public class Menu
      */
     public static String prompt_State()
     {
-        boolean invalidInput;
-
         System.out.println("State: ");
         userString = userInput.nextLine();
 
@@ -172,8 +165,6 @@ public class Menu
      */
     public static String prompt_Zip()
     {
-        boolean invalidInput;
-
         System.out.println("Zip: ");
         userString = userInput.nextLine();
 
@@ -193,8 +184,6 @@ public class Menu
      */
     public static String prompt_Telephone()
     {
-        boolean invalidInput;
-
         System.out.println("Telephone: ");
         userString = userInput.nextLine();
 
